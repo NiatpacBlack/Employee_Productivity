@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Страница Регистрации
+{% endblock %}
+
+{% block content %}
+    <p></p>
+    <h2>Заполните информацию о себе</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% for f in form %}
+            <p>{{ f.label }}</p>
+            <p>{{ f }}</p>
+            <div class="form-error"><font color="red">{{ f.errors }}</font></div>
+
+        {% endfor %}
+        <br>
+        <button type="submit">Регистрация</button>
+    </form>
+{% endblock %}

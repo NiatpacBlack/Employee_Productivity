@@ -1,0 +1,100 @@
+/*общие поля*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', 'Geneva', sans-serif;
+    color: #1D1D1D
+}
+
+ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0; /*убираем левый отступ, равный 40px*/
+}
+
+a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    color: #1D1D1D;
+}
+
+.clear {
+    clear: both;
+}
+
+/*основные части сайта*/
+.header {
+    width: 100%;
+    height: 72px;
+    background: #ecbfbf;
+}
+
+/*контейнер*/
+.container {
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(170, 239, 135, 0.27);
+    overflow: hidden;
+}
+
+/*элементы шапки*/
+.header {
+    position: fixed;
+    z-index: 1;
+}
+.header__left, .header__center, .header__right {
+    display: flex;
+    width: 100%;
+    margin-top: 27px;
+}
+
+.header__left {
+    justify-content: left;
+}
+
+.header__center {
+    justify-content: center;
+}
+.header__center a {
+    margin: 0 0 0 1vw;
+}
+
+
+.header__right {
+    justify-content: right;
+
+}
+
+.header__right a {
+    margin: 0 1vw 0 1vw;
+}
+
+@media screen and (max-width: 767px){
+    #logo {
+        display: none;
+    }
+    .header__center {
+        justify-content: left;
+    }
+    .header__center .about {
+        display: none;
+    }
+}
+
+
+/*элементы тела сайта*/
+.body__body {
+    padding-top: 72px;
+}
+
+.body__body .create_task_header,
+                .create_task_form,
+                    .login_header,
+                        .login_form {
+    text-align: center;
+}
